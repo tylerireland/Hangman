@@ -94,9 +94,12 @@ public class HangmanDriver {
 				}
 			}
 			
-			println("Clear the consolde and hand the laptop over to the next player");
+			println("Clear the console and hand the laptop over to the next player");
 			Sleep(5);
-		
+			
+			for(int i = 0; i < 200; i++) {
+				println("\n\n");
+			}
 			
 			println("You have 6 guesses to solve the phrase.");
 			
@@ -107,75 +110,75 @@ public class HangmanDriver {
 			do {
 				switch(limit) {
 					case 6:
-						System.out.println("_______");
-						System.out.println("|      |");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|_____");
+						println("_______");
+						println("|      |");
+						println("|");
+						println("|");
+						println("|");
+						println("|");
+						println("|");
+						println("|");
+						println("|_____");
 						break;
 					case 5:
-						System.out.println("_______");
-						System.out.println("|      |");
-						System.out.println("|      O");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|_____");
+						println("_______");
+						println("|      |");
+						println("|      O");
+						println("|");
+						println("|");
+						println("|");
+						println("|");
+						println("|");
+						println("|_____");
 						break;
 					case 4:
-						System.out.println("_______");
-						System.out.println("|      |");
-						System.out.println("|      O");
-						System.out.println("|      |");
-						System.out.println("|      |");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|_____");
+						println("_______");
+						println("|      |");
+						println("|      O");
+						println("|      |");
+						println("|      |");
+						println("|");
+						println("|");
+						println("|");
+						println("|_____");
 						break;
 					case 3:
-						System.out.println("_______");
-						System.out.println("|      |");
-						System.out.println("|      O");
-						System.out.println("|     /|");
-						System.out.println("|      |");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|_____");
+						println("_______");
+						println("|      |");
+						println("|      O");
+						println("|     /|");
+						println("|      |");
+						println("|");
+						println("|");
+						println("|");
+						println("|_____");
 						break;
 					case 2:
-						System.out.println("_______");
-						System.out.println("|      |");
-						System.out.println("|      O");
-						System.out.println("|     /|\\");
-						System.out.println("|      |");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|_____");
+						println("_______");
+						println("|      |");
+						println("|      O");
+						println("|     /|\\");
+						println("|      |");
+						println("|");
+						println("|");
+						println("|");
+						println("|_____");
 						break;
 					case 1:
-						System.out.println("_______");
-						System.out.println("|      |");
-						System.out.println("|      O");
-						System.out.println("|     /|\\");
-						System.out.println("|      |");
-						System.out.println("|     /");
-						System.out.println("|");
-						System.out.println("|");
-						System.out.println("|_____");
+						println("_______");
+						println("|      |");
+						println("|      O");
+						println("|     /|\\");
+						println("|      |");
+						println("|     /");
+						println("|");
+						println("|");
+						println("|_____");
 						break;
 						
 				}
 				// prints the new guessing list with new letters
-				System.out.println();
+				println("");
 				for(int i = 0; i < GuessList.size();i++) {
 					print(GuessList.get(i));
 				}	
@@ -186,7 +189,7 @@ public class HangmanDriver {
 				// checks the guess and sets the letter on the list to view
 				for(int i = 0; i < GuessList.size();i++) {
 					if(String.valueOf(CheckList.get(i)).toLowerCase().equals(guess.toLowerCase())) {
-						GuessList.set(i, guess);
+						GuessList.set(i, CheckList.get(i).toString());
 					}
 				}
 				
@@ -209,15 +212,15 @@ public class HangmanDriver {
 				}
 			} while(limit >0 );
 			
-			System.out.println("_______");
-			System.out.println("|      |");
-			System.out.println("|      O");
-			System.out.println("|     /|\\");
-			System.out.println("|      |");
-			System.out.println("|     / \\");
-			System.out.println("|");
-			System.out.println("|");
-			System.out.println("|_____");
+			println("_______");
+			println("|      |");
+			println("|      O");
+			println("|     /|\\");
+			println("|      |");
+			println("|     / \\");
+			println("|");
+			println("|");
+			println("|_____");
 			
 			println("\nGame Over!");
 			Sleep(1);
